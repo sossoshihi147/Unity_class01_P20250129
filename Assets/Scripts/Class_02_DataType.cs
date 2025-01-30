@@ -19,4 +19,16 @@ public class NewEmptyCSharpScript : MonoBehaviour
     public bool isDead = false;       //是否死亡:否
     public bool gameOver = true;      //是否結束:是
 
+    //整數資料類型
+    public byte lv = 18;              //byte型別 範圍0~255 大小8 bit
+    public uint coin = 9999;          //uint型別 範圍0 到 4,294,967,295 大小32 bit
+    public long item = 3000;          //long型別 範圍-9,223,372,036,854,775,808 至 9,223,372,036,854,775,807 大小64 bit
+
+    //字串與字元
+    public string playerName = "Oliver";  //字串:儲存多個字元 使用雙引號
+    public char a = 'a';                  //字元:儲存一個字元 使用單引號
+
+    //溢位 (會有錯誤提示)
+    //public sbyte number = 128;
+
 }
