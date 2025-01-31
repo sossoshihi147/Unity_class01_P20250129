@@ -3,7 +3,7 @@
 /// <summary>
 /// 認識 C#資料類型
 /// </summary>
-public class NewEmptyCSharpScript : MonoBehaviour
+public class Class_02_DataType : MonoBehaviour
 {
     //變數語法 :
     //修飾詞 資料類型 變數名稱 指定 預設值;

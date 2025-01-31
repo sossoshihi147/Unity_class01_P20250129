@@ -221,6 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 723927473}
   - component: {fileID: 723927472}
+  - component: {fileID: 723927474}
   m_Layer: 0
   m_Name: "\u8AB2\u7A0B_1_\u8B8A\u6578"
   m_TagString: Untagged
@@ -256,6 +257,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &723927474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723927471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9910a38fa59f62b4baf0ddec01fcc027, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 999
+  weapon: "\u4E09\u9805\u4E4B\u529B"
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
