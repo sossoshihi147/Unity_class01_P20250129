@@ -92,11 +92,34 @@ public class Class_03_Operator : MonoBehaviour
         int numberC = 61, numberD = 63;
 
         Debug.Log(numberC > numberD);      //大　　於    False
-        Debug.Log(numberC < numberD);      //小　　於    Ture
+        Debug.Log(numberC < numberD);      //小　　於    True
         Debug.Log(numberC >= numberD);     //大於等於    False
-        Debug.Log(numberC <= numberD);     //小於等於    Ture
+        Debug.Log(numberC <= numberD);     //小於等於    True
         Debug.Log(numberC == numberD);     //等　　於    False
-        Debug.Log(numberC != numberD);     //不　等於    Ture
+        Debug.Log(numberC != numberD);     //不　等於    True
+        #endregion
+
+        #region 布林邏輯運算子
+        Debug.Log("<color=#f93>--- 布林邏輯運算子 ---</color>");
+        //邏輯否定 : 將布林值變成相反的值
+        
+        Debug.Log(!true);                //False
+        Debug.Log(!false);               //True
+        bool boolVarTrue = true , boolVarFalse = false;
+        Debug.Log(!boolVarTrue);         //False
+        Debug.Log(!boolVarFalse);        //True
+
+        Debug.Log("<color=#f93>--- 並且或或者 &&、|| ---</color>");
+        //並且 : 比較兩個布林值，只要有一個 false 結果就 false 
+        Debug.Log(true && true);                //true
+        Debug.Log(true && false);               //false
+        Debug.Log(false && true);               //false
+        Debug.Log(false && false);              //false
+        //或者 : 比較兩個布林值，只要有一個 true 結果就 true 
+        Debug.Log(true || true);                //true
+        Debug.Log(true || false);               //true
+        Debug.Log(false || true);               //true
+        Debug.Log(false || false);              //false
         #endregion
     }
 }
