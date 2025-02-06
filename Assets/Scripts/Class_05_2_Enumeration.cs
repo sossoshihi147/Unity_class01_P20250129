@@ -35,9 +35,10 @@ namespace OLIVER
             // 透過數值設定列舉
             season = (Season)2;
             Debug.Log(season);
-        } 
+        }
         #endregion
 
+        #region 定義列舉數值
         // 定義列舉的數值
         /// <summary>
         /// 道具
@@ -46,7 +47,7 @@ namespace OLIVER
         {
             None = 0, Coin = 1, RedWater = 10, BlueWater = 15, Chicken = 20
         }
-        [SerializeField,Header("道具")]
+        [SerializeField, Header("道具")]
         private Item item = Item.Chicken;
 
         // 執行順序 : Awake > Start > Update
@@ -54,6 +55,33 @@ namespace OLIVER
         private void Start()
         {
             Debug.Log((int)item);
+        }
+        private void Update()
+        {
+            // 列舉與判斷式 Switch
+            // switch + Tab *2 > 修改 switch_on 為列舉 > Enter * 2 快速完成
+            switch (item)
+            {
+                case Item.None:
+                    Debug.Log($"沒有道具 價值:{(int)item}");
+                    break;
+                case Item.Coin:
+                    Debug.Log($"金幣 價值:{(int)item}");
+                    break;
+                case Item.RedWater:
+                    Debug.Log($"紅色藥水 價值:{(int)item}");
+                    break;
+                case Item.BlueWater:
+                    Debug.Log($"藍色藥水 價值:{(int)item}");
+                    break;
+                case Item.Chicken:
+                    Debug.Log($"炸雞 價值:{(int)item}");
+                    break;
+                default:
+                    Debug.Log("這不是道具");
+                    break;
+            }
+            #endregion
         }
     }
 }
