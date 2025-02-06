@@ -104,7 +104,7 @@ namespace OLIVER
                     Debug.Log("<color=#ff3>這是不能使用的武器</color>");
                     break;
 
-            } 
+            }
             #endregion
 
             #region if練習題
@@ -128,7 +128,7 @@ namespace OLIVER
             else if (hp == 0)
             {
                 Debug.Log("<color=#fff>你已經死了</color>");
-            } 
+            }
             #endregion
         }
 
