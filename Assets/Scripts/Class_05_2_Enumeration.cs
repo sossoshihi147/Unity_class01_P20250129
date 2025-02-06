@@ -7,6 +7,7 @@ namespace OLIVER
     /// </summary>
     public class Class_05_2_Enumeration : MonoBehaviour
     {
+        #region 認識列舉基本用法
         // 列舉 :定義下拉式選單的選項 (通常都是單選)
         // 語法 :
         // 修飾詞 關鍵字 enum 列舉名稱 { 列舉選項 }
@@ -34,6 +35,25 @@ namespace OLIVER
             // 透過數值設定列舉
             season = (Season)2;
             Debug.Log(season);
+        } 
+        #endregion
+
+        // 定義列舉的數值
+        /// <summary>
+        /// 道具
+        /// </summary>
+        private enum Item
+        {
+            None = 0, Coin = 1, RedWater = 10, BlueWater = 15, Chicken = 20
+        }
+        [SerializeField,Header("道具")]
+        private Item item = Item.Chicken;
+
+        // 執行順序 : Awake > Start > Update
+        // 開始事件 : 在喚醒事件後執行一次 (初始化)
+        private void Start()
+        {
+            Debug.Log((int)item);
         }
     }
 }
