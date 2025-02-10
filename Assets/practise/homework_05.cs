@@ -10,19 +10,19 @@ public class homework_05 : MonoBehaviour
     {
         switch (hp)
         {
-            case 0:
+            case >=80:
                 Debug.Log("<color=#fff>你已經死了</color>");
                 break;
-            case int n when (n >= 10 && n < 40):
+            case >=60:
                 Debug.Log("<color=#f00>你快死掉了</color>");
                 break;
-            case int n when (n >= 40 && n < 60):
+            case >=40:
                 Debug.Log("<color=#fa0>警告，快喝水</color>");
                 break;
-            case int n when (n >= 60 && n < 80):
+            case >=10:
                 Debug.Log("<color=#ff0>你的健康有點狀況</color>");
                 break;
-            case int n when (n >= 80):
+            case 0:
                 Debug.Log("<color=#7f0>你的血量安全</color>");
                 break;
         }
