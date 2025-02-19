@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 
 namespace OLIVER
 {
@@ -51,6 +52,31 @@ namespace OLIVER
             LogSystem.LogWithColor(byte4, "#ff0");
 
             LogSystem.LogWithColor("-----------", "#ffa");
+        }
+
+        private void Start()
+        {
+            // 將整數轉為字串
+            int count = 99;
+            var intToString = Convert.ToString(count);
+            LogSystem.LogWithColor(intToString.GetType(), "#f96");
+            // 將布林值轉為字串
+            bool isOver = false;
+            var boolToString = Convert.ToString(isOver);
+            LogSystem.LogWithColor(boolToString.GetType(), "#f96");
+
+            // 浮點數會四捨五入(規則需查閱文件)
+            float move = 4.5f;
+            var floatToByte = Convert.ToByte(move);
+            LogSystem.LogWithColor(floatToByte, "#f06");
+            LogSystem.LogWithColor(floatToByte.GetType(), "#f06");
+
+            // true = 1, false = 0
+            bool isGrounded = true;
+            var boolToByte = Convert.ToByte(isGrounded);
+            LogSystem.LogWithColor(boolToByte, "#6f6");
+            LogSystem.LogWithColor(boolToByte.GetType(), "#6f6");
+
         }
     }
 }
