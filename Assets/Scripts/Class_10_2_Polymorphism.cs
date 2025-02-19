@@ -20,8 +20,8 @@ namespace OLIVER
             // 多型 : 宣告時使用父類別
             Card card1 = new Card("一般卡片", 0);
             Card magic2 = new Magic("羽毛掃", 7);
-            card1.Information();        // 型式 1：呼叫 Card 的方卡
-            magic2.Information();       // 型式 2：呼叫 Magic 的方卡
+            card1.Information();        // 型式 1：呼叫 Card 的方法
+            magic2.Information();       // 型式 2：呼叫 Magic 的方法
 
         }
     }
