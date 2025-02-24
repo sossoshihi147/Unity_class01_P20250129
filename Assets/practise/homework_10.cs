@@ -6,9 +6,9 @@ namespace OLIVER
     {
         private void Start()
         {
-            Potion redWater = new Potion("紅色藥水");
-            Potion blueWater = new Potion("藍色藥水");
-            equipage helmet = new equipage("頭盔");
+            var redWater = new Potion("紅色藥水");
+            var blueWater = new Potion("藍色藥水");
+            Equipage helmet = new Equipage("頭盔");
 
             redWater.Use();
             blueWater.Use(50);
@@ -39,9 +39,9 @@ namespace OLIVER
             }
         }
 
-        public class equipage : Item
+        public class Equipage : Item
         {
-            public equipage(string _name) : base(_name)
+            public Equipage(string _name) : base(_name)
             {
             }
             public override void Use()
