@@ -9,6 +9,7 @@ namespace OLIVER.Class_15
     {
         private void Awake()
         {
+            #region 不使用泛型的範例
             int numberA = 7, numberB = 9;
             LogSystem.LogWithColor($"數字 A 與 B：{numberA} | {numberB}", "#f93");
             SwapNumber(ref numberA, ref numberB);
@@ -22,7 +23,26 @@ namespace OLIVER.Class_15
             object objA = 3.5f, objB = 7.7f;
             LogSystem.LogWithColor($"物件 A 與 B：{objA} | {objB}", "#f93");
             SwapObject(ref objA, ref objB);
-            LogSystem.LogWithColor($"物件 A 與 B：{objA} | {objB}", "#f93");
+            LogSystem.LogWithColor($"物件 A 與 B：{objA} | {objB}", "#f93"); 
+            #endregion
+
+            bool boolA = true, boolB = false;
+            LogSystem.LogWithColor($"A 與 B：{boolA} | {boolB}", "#9f9");
+            Swap<bool>(ref boolA, ref boolB);
+            LogSystem.LogWithColor($"A 與 B：{boolA} | {boolB}", "#9f9");
+
+            byte byteA = 1, byteB = 9;
+            LogSystem.LogWithColor($"A 與 B：{byteA} | {byteB}", "#9f9");
+            Swap<byte>(ref byteA, ref byteB);
+            LogSystem.LogWithColor($"A 與 B：{byteA} | {byteB}", "#9f9");
+
+            var player1 = new DataPlayer<int>();
+            player1.data = 99;
+            player1.LogData(123);
+
+            var player2 = new DataPlayer<string>();
+            player2.data = "玩家二";
+            player2.LogData("是在哈囉");
         }
 
         /// <summary>
@@ -58,5 +78,28 @@ namespace OLIVER.Class_15
             a = b;
             b = temp;
         } 
+
+        /// <summary>
+        /// 使用泛型進行對調
+        /// </summary>
+        /// <typeparam name="T">要對調的資料類型</typeparam>
+        /// <param name="a">第一個資料</param>
+        /// <param name="b">第二個資料</param>
+        public void Swap<T>(ref T a, ref T b)
+        {
+            T temp = a;
+            a = b;
+            b = temp;
+        }
+    }
+
+    public class DataPlayer<T>
+    {
+        public T data;
+
+        public void LogData(T data)
+        {
+            LogSystem.LogWithColor(data, "#09f");
+        }
     }
 }
