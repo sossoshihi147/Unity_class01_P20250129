@@ -30,6 +30,13 @@ namespace OLIVER.Class_17
             UseCard(card1);
             UseCard(card4);
             UseCard(("洛奇亞", 8, 199));
+
+            var card1Update = UPdateCardCost(card1);
+            LogSystem.LogWithColor($"{card1Update.name} | " +
+                $"消耗：{card1Update.cost} | 編號：{card1Update.index}", "#f49");
+
+            LogSystem.LogWithColor($"{card1Update == card1}", "#79f");
+            LogSystem.LogWithColor($"{card1Update != card1}", "#79f");
         }
 
         /// <summary>
@@ -39,6 +46,13 @@ namespace OLIVER.Class_17
         private void UseCard((string name, int cost, int index) card)
         {
             LogSystem.LogWithColor($"消耗 {card.cost} 使用卡牌：{card.name}", "#ff3");
+        }
+
+        private (string name, int cost, int index) UPdateCardCost((string name, int cost, int index) card)
+        {
+            card.name = card.name + " 降低消耗版本";
+            card.cost -= 1;
+            return card;
         }
     }
 }
